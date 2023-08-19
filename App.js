@@ -1,10 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Platform } from "react-native";
+import RegistrationScreen from "./screens/RegistrationScreen";
 
 export default App = () => (
-  <View style={styles.container}>
-    <Text style={styles.title}>React Native</Text>
-  </View>
+  <RegistrationScreen></RegistrationScreen>
 );
 
 const styles = StyleSheet.create({
