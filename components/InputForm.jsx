@@ -1,8 +1,10 @@
 import { StyleSheet, TextInput, View } from "react-native";
 
-export default InputForm = ({ placeholder }) => (
+export default InputForm = (props) => (
   <View>
-    <TextInput style={styles.input} placeholder={placeholder}></TextInput>
+    <TextInput {...props} style={styles.input} placeholderTextColor="#bdbdbd">
+      {props.children}
+    </TextInput>
   </View>
 );
 
