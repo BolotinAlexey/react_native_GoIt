@@ -9,7 +9,7 @@ export default RegistrationWindow = () => (
     <TitleWindow>Реєстрація</TitleWindow>
     <FormRegistration></FormRegistration>
     <BtnWindow>Зареєстуватися</BtnWindow>
-    <Question></Question>
+    <Question txt="Вже є акаунт?" btn="Увійти"></Question>
   </View>
 );
 

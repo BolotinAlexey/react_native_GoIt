@@ -33,12 +33,14 @@ const styles = StyleSheet.create({
   },
   btn: {
     position: "absolute",
-    padding: 6,
-    right: 0,
+    padding: 10,
+    right: 6,
   },
   passwordInputText: {
-    top: Platform.OS === "ios" ? 10 : 13,
+    // top: Platform.OS === "ios" ? 10 : 13,
+    top: 6,
     color: "#1B4371",
     fontSize: 16,
+    fontFamily: "Roboto-Medium",
   },
 });

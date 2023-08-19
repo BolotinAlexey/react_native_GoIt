@@ -15,5 +15,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#BDBDBD",
     borderRadius: 7,
+    fontFamily: "Roboto-Medium",
   },
 });

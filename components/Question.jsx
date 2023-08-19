@@ -1,11 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default Question = () => (
+export default Question = ({ txt, btn }) => (
   <View style={styles.container}>
-    <Text style={styles.txt}>Вже є акаунт?</Text>
+    <Text style={styles.txt}>{txt}</Text>
 
     <TouchableOpacity style={styles.btn}>
-      <Text style={styles.txt}> Увійти</Text>
+      <Text style={{ ...styles.txt, paddingHorizontal: 10 }}>{btn}</Text>
     </TouchableOpacity>
   </View>
 );
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   txt: {
     color: "#1B4371",
     fontSize: 16,
+    fontFamily: "Roboto-Medium",
   },
   // passwordInputText: {
   //   top: Platform.OS === "ios" ? 10 : 13,

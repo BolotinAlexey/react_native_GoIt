@@ -11,5 +11,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 30,
     fontWeight: "500",
+    fontFamily: "Roboto-Bold",
   },
 });
