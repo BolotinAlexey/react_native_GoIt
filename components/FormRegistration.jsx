@@ -1,11 +1,6 @@
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
 import InputForm from "./InputForm";
+import InputPassword from "./InputPassword";
 
 export default FormRegistration = () => (
   <View style={styles.container}>
@@ -14,12 +9,7 @@ export default FormRegistration = () => (
       placeholder={"Адреса електронної пошти"}
       keyboardType="email-address"
     ></InputForm>
-    <View style={styles.passwordInputWrap}>
-      <InputForm placeholder={"Пароль"} secureTextEntry={true}></InputForm>
-      <TouchableOpacity style={styles.btn}>
-        <Text style={styles.passwordInputText}>Показати</Text>
-      </TouchableOpacity>
-    </View>
+    <InputPassword></InputPassword>
   </View>
 );
 
@@ -27,20 +17,5 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     gap: 16,
-  },
-  passwordInputWrap: {
-    position: "relative",
-  },
-  btn: {
-    position: "absolute",
-    padding: 10,
-    right: 6,
-  },
-  passwordInputText: {
-    // top: Platform.OS === "ios" ? 10 : 13,
-    top: 6,
-    color: "#1B4371",
-    fontSize: 16,
-    fontFamily: "Roboto-Medium",
   },
 });

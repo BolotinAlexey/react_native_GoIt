@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     color: "#20232a",
     textAlign: "center",
     fontSize: 30,
-    fontWeight: "500",
-    fontFamily: "Roboto-Bold",
+    fontFamily: "Roboto-Medium",
   },
 });

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
   },
   txt: {
-    fontFamily: "Roboto-Medium",
+    fontFamily: "Roboto-Regular",
     color: "#fff",
   },
 });
