@@ -1,11 +1,13 @@
 import { StyleSheet, View } from "react-native";
 import TitleWindow from "./TitleWindow";
 import FormRegistration from "./FormRegistration";
+import BtnWindow from "./BtnWindow";
 
 export default RegistrationWindow = () => (
   <View style={styles.window}>
     <TitleWindow>Реєстрація</TitleWindow>
     <FormRegistration></FormRegistration>
+    <BtnWindow>Зареєстуватися</BtnWindow>
   </View>
 );
 

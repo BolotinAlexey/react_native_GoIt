@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
 import InputForm from "./InputForm";
 
 export default FormRegistration = () => (
@@ -25,7 +25,10 @@ const styles = StyleSheet.create({
   },
   passwordInputText: {
     position: "absolute",
-    right: 16,
-    top: 16,
+    padding: 6,
+    right: 0,
+    top: Platform.OS === "ios" ? 10 : 13,
+    color: "#1B4371",
+    fontSize: 16,
   },
 });
