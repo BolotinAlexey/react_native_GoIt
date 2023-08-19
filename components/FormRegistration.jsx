@@ -1,4 +1,10 @@
-import { Platform, StyleSheet, Text, View } from "react-native";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import InputForm from "./InputForm";
 
 export default FormRegistration = () => (
@@ -10,7 +16,9 @@ export default FormRegistration = () => (
     ></InputForm>
     <View style={styles.passwordInputWrap}>
       <InputForm placeholder={"Пароль"} secureTextEntry={true}></InputForm>
-      <Text style={styles.passwordInputText}>Показати</Text>
+      <TouchableOpacity style={styles.btn}>
+        <Text style={styles.passwordInputText}>Показати</Text>
+      </TouchableOpacity>
     </View>
   </View>
 );
@@ -23,10 +31,12 @@ const styles = StyleSheet.create({
   passwordInputWrap: {
     position: "relative",
   },
-  passwordInputText: {
+  btn: {
     position: "absolute",
     padding: 6,
     right: 0,
+  },
+  passwordInputText: {
     top: Platform.OS === "ios" ? 10 : 13,
     color: "#1B4371",
     fontSize: 16,
