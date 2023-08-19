@@ -3,13 +3,14 @@ import { StyleSheet, Text, View, Platform } from "react-native";
 import RegistrationScreen from "./screens/RegistrationScreen";
 
 export default App = () => (
-  <RegistrationScreen></RegistrationScreen>
+  <View style={styles.container}>
+    <RegistrationScreen></RegistrationScreen>
+  </View>
 );
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 24,
     ...Platform.select({
       ios: {
         backgroundColor: "#000000",
