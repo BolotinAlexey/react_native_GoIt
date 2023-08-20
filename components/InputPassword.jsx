@@ -7,7 +7,11 @@ export default FormLogin = () => {
 
   return (
     <View style={styles.passwordInputWrap}>
-      <InputForm placeholder={"Пароль"} secureTextEntry={isShow}></InputForm>
+      <InputForm
+        inputMode="text"
+        placeholder={"Пароль"}
+        secureTextEntry={isShow}
+      ></InputForm>
       <TouchableOpacity style={styles.btn} onPress={() => setIsShow(!isShow)}>
         <Text style={styles.passwordInputText}>
           {isShow ? "Показати" : "Сховати"}

@@ -3,19 +3,16 @@ import { StyleSheet, TextInput, View } from "react-native";
 
 export default InputForm = (props) => {
   const [focus, setFocus] = useState(false);
+  const [text, setText] = useState("");
 
-  function onFocus(e) {
-    setFocus(true);
-  }
-  function onBlur(e) {
-    setFocus(false);
-  }
   return (
     <View>
       <TextInput
         {...props}
-        onFocus={onFocus}
-        onBlur={onBlur}
+        value={text}
+        onChangeText={setText}
+        onFocus={() => setFocus(true)}
+        onBlur={() => setFocus(false)}
         style={{
           ...styles.input,
           borderColor: focus ? "#FF6C00" : "#BDBDBD",

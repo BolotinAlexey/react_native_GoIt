@@ -1,15 +1,20 @@
-import { StyleSheet, View } from "react-native";
+import { KeyboardAvoidingView, StyleSheet, View } from "react-native";
 import InputForm from "./InputForm";
 import InputPassword from "./InputPassword";
 
 export default FormRegistration = () => (
   <View style={styles.container}>
-    <InputForm autofocus placeholder={"Логін"}></InputForm>
-    <InputForm
-      placeholder={"Адреса електронної пошти"}
-      keyboardType="email-address"
-    ></InputForm>
-    <InputPassword></InputPassword>
+    <KeyboardAvoidingView
+      behavior={Platform.OS == "ios" ? "padding" : "height"}
+    >
+      <InputForm autofocus placeholder={"Логін"}></InputForm>
+      <InputForm
+        inputMode="email"
+        placeholder={"Адреса електронної пошти"}
+        keyboardType="email-address"
+      ></InputForm>
+      <InputPassword></InputPassword>
+    </KeyboardAvoidingView>
   </View>
 );
 
