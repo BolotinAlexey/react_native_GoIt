@@ -3,6 +3,7 @@ import { useFonts } from "expo-font";
 
 import RegistrationScreen from "./screens/RegistrationScreen";
 import LoginScreen from "./screens/LoginScreen";
+import { useState } from "react";
 
 export default App = () => {
   const [fontsLoaded] = useFonts({
@@ -11,13 +12,26 @@ export default App = () => {
     "Roboto-Regular": require("./assets/fonts/Roboto-Regular.ttf"),
   });
 
+  const [isLogin, setIsLogin] = useState(false);
+
   if (!fontsLoaded) {
     return null;
   }
   return (
     <View style={styles.container}>
-      {/* <RegistrationScreen></RegistrationScreen> */}
-      <LoginScreen></LoginScreen>
+      {isLogin ? (
+        <LoginScreen
+          chooseScreen={() => {
+            setIsLogin(false);
+          }}
+        ></LoginScreen>
+      ) : (
+        <RegistrationScreen
+          chooseScreen={() => {
+            setIsLogin(true);
+          }}
+        ></RegistrationScreen>
+      )}
     </View>
   );
 };

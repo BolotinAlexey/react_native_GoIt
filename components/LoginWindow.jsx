@@ -4,12 +4,17 @@ import FormLogin from "./FormLogin";
 import BtnWindow from "./BtnWindow";
 import Question from "./Question";
 
-export default LoginWindow = () => (
+export default LoginWindow = ({ chooseScreen }) => (
   <View style={styles.window}>
     <TitleWindow>Увійти</TitleWindow>
     <FormLogin></FormLogin>
     <BtnWindow>Увійти</BtnWindow>
-    <Question txt="Немає акаунту?" btn="Зареєструватися" isRegister></Question>
+    <Question
+      txt="Немає акаунту?"
+      btn="Зареєструватися"
+      isRegister
+      chooseScreen={chooseScreen}
+    ></Question>
   </View>
 );
 

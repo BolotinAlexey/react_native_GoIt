@@ -1,12 +1,12 @@
 import { StyleSheet, ImageBackground } from "react-native";
 import LoginWindow from "../components/LoginWindow";
 
-export default LoginScreen = () => (
+export default LoginScreen = ({ chooseScreen }) => (
   <ImageBackground
     source={require("../assets/images/Photo_BG.jpg")}
     style={styles.bg}
   >
-    <LoginWindow></LoginWindow>
+    <LoginWindow chooseScreen={chooseScreen}></LoginWindow>
   </ImageBackground>
 );
 

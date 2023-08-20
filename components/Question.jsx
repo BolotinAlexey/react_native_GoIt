@@ -1,10 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default Question = ({ txt, btn, isRegister }) => (
+export default Question = ({ txt, btn, isRegister, chooseScreen }) => (
   <View style={styles.container}>
     <Text style={styles.txt}>{txt}</Text>
 
-    <TouchableOpacity style={styles.btn}>
+    <TouchableOpacity style={styles.btn} onPress={chooseScreen}>
       <Text
         style={{
           ...styles.txt,
