@@ -1,4 +1,10 @@
-import { StyleSheet, View, Platform } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Platform,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native";
 import { useFonts } from "expo-font";
 
 import RegistrationScreen from "./screens/RegistrationScreen";
@@ -18,21 +24,23 @@ export default App = () => {
     return null;
   }
   return (
-    <View style={styles.container}>
-      {isLogin ? (
-        <LoginScreen
-          chooseScreen={() => {
-            setIsLogin(false);
-          }}
-        ></LoginScreen>
-      ) : (
-        <RegistrationScreen
-          chooseScreen={() => {
-            setIsLogin(true);
-          }}
-        ></RegistrationScreen>
-      )}
-    </View>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={styles.container}>
+        {isLogin ? (
+          <LoginScreen
+            chooseScreen={() => {
+              setIsLogin(false);
+            }}
+          ></LoginScreen>
+        ) : (
+          <RegistrationScreen
+            chooseScreen={() => {
+              setIsLogin(true);
+            }}
+          ></RegistrationScreen>
+        )}
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 

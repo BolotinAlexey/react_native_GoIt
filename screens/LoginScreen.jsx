@@ -1,4 +1,8 @@
-import { StyleSheet, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  ImageBackground,
+  KeyboardAvoidingView,
+} from "react-native";
 import LoginWindow from "../components/LoginWindow";
 
 export default LoginScreen = ({ chooseScreen }) => (
@@ -6,21 +10,21 @@ export default LoginScreen = ({ chooseScreen }) => (
     source={require("../assets/images/Photo_BG.jpg")}
     style={styles.bg}
   >
-    <LoginWindow chooseScreen={chooseScreen}></LoginWindow>
+    <KeyboardAvoidingView
+      style={styles.wrap}
+      behavior={Platform.OS == "ios" ? "padding" : "height"}
+    >
+      <LoginWindow chooseScreen={chooseScreen}></LoginWindow>
+    </KeyboardAvoidingView>
   </ImageBackground>
 );
 
 const styles = StyleSheet.create({
-  avatar: {
-    position: "relative",
-    width: 120,
-    height: 120,
-    backgroundColor: "#F6F6F6",
-    borderRadius: 16,
-  },
-  bg: {
-    flex: 1,
+  wrap: {
     flexDirection: "column-reverse",
     alignItems: "center",
   },
+  bg: {
+    flex: 1,
+    justifyContent: "flex-end",}
 });
